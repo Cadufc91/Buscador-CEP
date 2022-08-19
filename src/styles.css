@@ -58,3 +58,13 @@
     border-radius: 10px;
     padding: 10px;
 }
+
+.main-title{
+    margin: 10px 0;
+    font-size: 30px;
+}
+
+.main span{
+    margin-bottom: 15px;
+    font-weight: bold;
+}
