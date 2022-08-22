@@ -6,6 +6,7 @@ Nesse projeto, foi utilizado:
 
 - React Hook useState;
 - React Icons.
+- Axios.
 
 # Instruções para rodar o projeto:
 Faça o clone do projeto na sua máquina:
