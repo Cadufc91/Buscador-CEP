@@ -4,7 +4,6 @@
 # Habilidades
 Nesse projeto, foi utilizado:
 
-- Context API do React para gerenciar estado.
 - React Hook useState;
 - React Icons.
 
