@@ -6,19 +6,19 @@ import api from './services/api';
 function App() {
   const [input, setInput] = useState('');
   const [cep, setCep] = useState('');
+  const [validateCep, setValidateCep] = useState(true);
 
   async function handleSearch(){
     try{
       const response = await api.get(`${input}/json`);
       setCep(response.data);
       setInput('');
-      console.log(response.data);
+      setValidateCep(true);
     } catch{
-      alert('CEP inválido. Exemplo: 53023707');
+      setValidateCep(false);
       setInput("");
     }
   }
-
 
   return (
     <div className="container">
@@ -32,6 +32,7 @@ function App() {
         />
         <button className='search-btn' onClick={handleSearch}><BsSearch size={25}/></button>
       </div>
+      {!validateCep && <p>Erro: CEP inválido. Exemplo: 21210210</p>}
 
       {Object.keys(cep).length > 0 && (
 
@@ -47,17 +48,14 @@ function App() {
               title='Mapa'
               src={`https://www.google.com/maps/embed/v1/search?key=AIzaSyBpUupMGNXDirVekwjLkuQfQHaIstLwbjE
               &q=${cep.cep}`}
-              width="600" 
-              height="350" 
+              width="700" 
+              height="230" 
               style={{ border: 0 }} 
               loading="lazy" 
               allowFullScreen
             />
 
         </div>
-
-        
-        
       )}             
       
     </div>

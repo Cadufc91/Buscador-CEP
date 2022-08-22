@@ -48,12 +48,19 @@
     transform: scale(1.2);
 }
 
+.container p{
+    color: rgb(211, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+}
+
 .result-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+
 .main{
     display: flex;
     justify-content: center;
