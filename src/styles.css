@@ -48,6 +48,12 @@
     transform: scale(1.2);
 }
 
+.result-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .main{
     display: flex;
     justify-content: center;
@@ -57,6 +63,7 @@
     background: #fff;
     border-radius: 10px;
     padding: 10px;
+    margin-bottom: 15px;
 }
 
 .main-title{
